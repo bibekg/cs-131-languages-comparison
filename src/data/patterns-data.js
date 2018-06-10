@@ -31,7 +31,7 @@ const languages = [
       "Memory Management": "Automatic via garbage collection",
       "Run Type": "Compiled",
       "Evaluation Strategy": "Strict and call-by-value",
-      "Concurrency / Parallelism": "lit"
+      "Concurrency / Parallelism": "Extensive support for multi-threading, volatile and atomic variables, AtomicArray's, etc."
     },
     notes: []
   },
