@@ -55,12 +55,12 @@ const languages = [
     type: "functional",
     axes: {
       Scoping: "static",
-      Typing: "weak",
-      "Memory Allocation": "lit",
-      "Memory Management": "lit",
-      "Run Type": "compiled",
-      "Evaluation Type": "hi",
-      "Concurrency / Parallelism": "lit"
+      Typing: "weak/dynamic",
+      "Memory Allocation": "Stack for recursive procedure calls. Heap for dynamically allocated stuff.",
+      "Memory Management": "Garbage Collector",
+      "Run Type": "interpreted/compiled",
+      "Evaluation Type": "Partially Lazy Evaluation using keyword delay",
+      "Concurrency / Parallelism": "Multi-threaded and supports parallelism"
     },
     notes: []
   },
