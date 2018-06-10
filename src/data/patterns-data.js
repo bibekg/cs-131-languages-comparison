@@ -10,12 +10,12 @@ const languages = [
     type: 'functional',
     axes: {
       'Scoping': 'static',
-      'Typing': 'weak',
-      'Memory Allocation': 'lit',
-      'Memory Management': 'lit',
+      'Typing': 'strong and static',
+      'Memory Allocation': 'runtime uses heap from OS to hold heap blocks which it fills up in response to allocation requests from program',
+      'Memory Management': 'uses Stop and Copy (removes fragmentation in memory) and Mark and Sweep (marks unreferenced areas in memory and frees them up)',
       'Run Type': 'compiled',
-      'Evaluation Type': 'hi',
-      'Concurrency / Parallelism': 'lit'
+      'Evaluation Type': 'strict',
+      'Concurrency / Parallelism': 'None'
     },
     notes: [
       
