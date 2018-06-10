@@ -60,13 +60,13 @@ export default function ComparisonColumns(props) {
                           words.map(word => (
                             subMap && subMap[word.toLowerCase()] ? <span>
                               <span className='hover-for-tooltip' data-tip data-for={`${axisName}.${word}`}>
-                                {word}
+                                {` ${word} `}
                               </span>
                               <ReactToolTip id={`${axisName}.${word}`} effect='solid'>
                                 {subMap[word.toLowerCase()]}
                               </ReactToolTip>
                             </span> :
-                            <span>{word}</span>
+                            <span>{` ${word} `}</span>
                           ))
                         }
                       </div>
