@@ -1,0 +1,34 @@
+@import '../../scss/Variables';
+
+.comparison-columns {
+
+  padding-top: 25px;
+  margin-top: 25px;
+
+  .patterns-names {
+
+    .pattern-name {
+
+      font-size: 24px;
+      font-weight: bold;
+
+      a {
+        &:after { content: url('../../images/link-icon.png'); }
+        text-decoration: none;
+      }
+
+      &.imperative a { color: $color-imperative; }
+      &.functional a { color: $color-functional; }
+      &.logical a { color: $color-logical; }
+    }
+  }
+
+  .pattern-type {
+    font-size: 14px;
+    color: $color-gray;
+  }
+
+  img {
+    width: 100%;
+  }
+}

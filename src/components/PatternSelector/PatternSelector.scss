@@ -1,0 +1,40 @@
+@import '../../scss/Variables';
+
+.pattern-selector {
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .pattern-selector-options {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    .pattern-selector-for-type {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+
+      &:not(:last-child) { margin-right: 2px; }
+      &:not(:first-child) { margin-left: 2px; }
+    }
+
+    .pattern-option {
+      &:not(:last-child) { margin-right: 2px; }
+      &:not(:first-child) { margin-left: 2px; }
+      margin-bottom: 4px;
+
+    }
+  }
+
+  .pattern-selector-toggler {
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+}

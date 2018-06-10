@@ -1,0 +1,45 @@
+@import '../../scss/Variables';
+
+.pattern-option {
+    padding: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.deselected {
+      background-color: white;
+
+      &.imperative-languages {
+        border: 2px solid $color-imperative;
+        color: $color-imperative;
+      }
+      &.logical-languages {
+        border: 2px solid $color-logical;
+        color: $color-logical;
+      }
+      &.functional-languages {
+        border: 2px solid $color-functional;
+        color: $color-functional;
+      }
+    }
+
+    &.selected {
+      color: white;
+
+      &.imperative-languages {
+        border: 2px solid transparent;
+        background-color: $color-imperative;
+      }
+
+      &.logical-languages {
+        border: 2px solid transparent;
+        background-color: $color-logical;
+      }
+
+      &.functional-languages {
+        border: 2px solid transparent;
+        background-color: $color-functional;
+      }
+    }
+}

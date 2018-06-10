@@ -1,0 +1,45 @@
+.pattern-comparisons {
+
+  .main-title {
+    text-align: center;
+  }
+
+  .comparison-columns {
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid gray;
+  }
+
+  .row-name {
+    position: sticky;
+    left: 0;
+    border-right: 1px solid gray;
+    background-color: white;
+    align-self: stretch;
+    margin: 0;
+  }
+
+  .patterns-row {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px 0;
+    & > * {
+      width: 200px;
+      flex-shrink: 0;
+      padding: 0px 10px;
+    }
+
+    .pattern-column {
+      width: 400px;
+    }
+    .pattern-column-header {
+      width: 200px;
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: capitalize;
+      
+    }
+  }
+}
