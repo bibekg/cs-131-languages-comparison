@@ -1,6 +1,8 @@
 import React from 'react';
 import './ComparisonColumns.scss';
 import CodeDisplay from '../CodeDisplay';
+import { TOOLTIP_MAP } from '../../data/tooltips'
+import ReactToolTip from 'react-tooltip'
 
 export default function ComparisonColumns(props) {
   const { items } = props;
@@ -45,11 +47,31 @@ export default function ComparisonColumns(props) {
               <div className='patterns-row' key={axisName}>
                 <div className='pattern-column-header'>{axisName}</div>
                 {
-                  items.map(item => (    
-                    <div className='pattern-column'>
-                      {item.axes[axisName]}
-                    </div>
-                  ))
+                  items.map(item => {
+                    const key1 = axisName.toLowerCase().split(' ').join('-')
+                    const subMap = TOOLTIP_MAP[key1]
+                    const words = item.axes[axisName].split(' ')
+                    const itemKey = `${axisName.toLowerCase().split(' ').join('-')}.${item.axes[axisName]}`
+
+                    console.log(itemKey)
+                    return (
+                      <div className='pattern-column'>
+                        {
+                          words.map(word => (
+                            subMap && subMap[word.toLowerCase()] ? <span>
+                              <span className='hover-for-tooltip' data-tip data-for={`${axisName}.${word}`}>
+                                {word}
+                              </span>
+                              <ReactToolTip id={`${axisName}.${word}`} effect='solid'>
+                                {subMap[word.toLowerCase()]}
+                              </ReactToolTip>
+                            </span> :
+                            <span>{word}</span>
+                          ))
+                        }
+                      </div>
+                    )
+                  })
                 }
               </div>
             )
