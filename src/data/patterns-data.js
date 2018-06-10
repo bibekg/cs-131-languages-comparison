@@ -9,14 +9,14 @@ const languages = [
     name: "OCaml",
     type: "functional",
     axes: {
-      Scoping: "static",
-      Typing: "strong and static",
+      Scoping: "Static",
+      Typing: "Strong and static",
       "Memory Allocation":
-        "runtime uses heap from OS to hold heap blocks which it fills up in response to allocation requests from program",
+        "Runtime uses heap from OS to hold heap blocks which it fills up in response to allocation requests from program",
       "Memory Management":
-        "uses Stop and Copy (removes fragmentation in memory) and Mark and Sweep (marks unreferenced areas in memory and frees them up)",
-      "Run Type": "compiled",
-      "Evaluation Type": "strict",
+        "Uses Stop and Copy (removes fragmentation in memory) and Mark and Sweep (marks unreferenced areas in memory and frees them up)",
+      "Run Type": "Compiled",
+      "Evaluation Strategy": "Strict",
       "Concurrency / Parallelism": "None"
     },
     notes: []
@@ -25,12 +25,12 @@ const languages = [
     name: "Java",
     type: "imperative",
     axes: {
-      Scoping: "static",
-      Typing: "weak",
-      "Memory Allocation": "lit",
-      "Memory Management": "lit",
-      "Run Type": "compiled",
-      "Evaluation Type": "hi",
+      Scoping: "Static",
+      Typing: "Weak",
+      "Memory Allocation": "Dynamic only; everything allocated on the heap",
+      "Memory Management": "Automatic via garbage collection",
+      "Run Type": "Compiled",
+      "Evaluation Strategy": "Strict and call-by-value",
       "Concurrency / Parallelism": "lit"
     },
     notes: []
@@ -39,14 +39,14 @@ const languages = [
     name: "Prolog",
     type: "logical",
     axes: {
-      Scoping: "neither static nor dynamic",
-      Typing: "weak and dynamic",
-      "Memory Allocation": "static",
+      Scoping: "Neither static nor dynamic",
+      Typing: "Weak and dynamic",
+      "Memory Allocation": "Static",
       "Memory Management":
         "GNU Prolog lacks garbage collection for both the heap and for atoms",
-      "Run Type": "compiled and interpreted",
-      "Evaluation Type": "lazy",
-      "Concurrency / Parallelism": "none"
+      "Run Type": "Compiled and interpreted",
+      "Evaluation Strategy": "Lazy",
+      "Concurrency / Parallelism": "None"
     },
     notes: []
   },
@@ -54,12 +54,12 @@ const languages = [
     name: "Scheme",
     type: "functional",
     axes: {
-      Scoping: "static",
-      Typing: "weak/dynamic",
+      Scoping: "Static",
+      Typing: "Weak/dynamic",
       "Memory Allocation": "Stack for recursive procedure calls. Heap for dynamically allocated stuff.",
       "Memory Management": "Garbage Collector",
-      "Run Type": "interpreted/compiled",
-      "Evaluation Type": "Partially Lazy Evaluation using keyword delay",
+      "Run Type": "Interpreted / compiled",
+      "Evaluation Strategy": "Partially lazy evaluation using keyword delay",
       "Concurrency / Parallelism": "Multi-threaded and supports parallelism"
     },
     notes: []
@@ -68,13 +68,13 @@ const languages = [
     name: "Python",
     type: "imperative",
     axes: {
-      Scoping: "static",
-      Typing: "Dynamic & Strong",
+      Scoping: "Static",
+      Typing: "Dynamic & strong",
       "Memory Allocation": "Memory management in Python involves a private heap containing all Python objects and data structures",
       "Memory Management": "Uses heap, Static Memory Allocation",
       "Run Type": "Interpreted",
-      "Evaluation Type": "Lazy",
-      "Concurrency / Parallelism": "Asynchronous"
+      "Evaluation Strategy": "Lazy",
+      "Concurrency / Parallelism": "Single-threaded, asynchronous concurrency using an event loop (asyncio)"
     },
     notes: []
   }
