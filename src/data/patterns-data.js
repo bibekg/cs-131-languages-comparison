@@ -69,12 +69,12 @@ const languages = [
     type: "imperative",
     axes: {
       Scoping: "static",
-      Typing: "weak",
-      "Memory Allocation": "lit",
-      "Memory Management": "lit",
-      "Run Type": "compiled",
-      "Evaluation Type": "hi",
-      "Concurrency / Parallelism": "lit"
+      Typing: "Dynamic & Strong",
+      "Memory Allocation": "Memory management in Python involves a private heap containing all Python objects and data structures",
+      "Memory Management": "Uses heap, Static Memory Allocation",
+      "Run Type": "Interpreted",
+      "Evaluation Type": "Lazy",
+      "Concurrency / Parallelism": "Asynchronous"
     },
     notes: []
   }
