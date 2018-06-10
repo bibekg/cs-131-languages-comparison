@@ -26,7 +26,7 @@ const languages = [
     type: "imperative",
     axes: {
       Scoping: "Static",
-      Typing: "Weak",
+      Typing: "Static & somewhere between weak and strong since it will implicitly coerce some things but not all",
       "Memory Allocation": "Dynamic only; everything allocated on the heap",
       "Memory Management": "Automatic via garbage collection",
       "Run Type": "Compiled",
@@ -55,7 +55,7 @@ const languages = [
     type: "functional",
     axes: {
       Scoping: "Static",
-      Typing: "Weak/dynamic",
+      Typing: "Weak and dynamic",
       "Memory Allocation": "Stack for recursive procedure calls. Heap for dynamically allocated stuff.",
       "Memory Management": "Garbage Collector",
       "Run Type": "Interpreted / compiled",
@@ -69,7 +69,7 @@ const languages = [
     type: "imperative",
     axes: {
       Scoping: "Static",
-      Typing: "Dynamic & strong",
+      Typing: "Strong and dynamic",
       "Memory Allocation": "Memory management in Python involves a private heap containing all Python objects and data structures",
       "Memory Management": "Uses heap, Static Memory Allocation",
       "Run Type": "Interpreted",
