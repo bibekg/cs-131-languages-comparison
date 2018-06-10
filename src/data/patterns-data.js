@@ -92,7 +92,7 @@ languages.forEach(language => {
   const languageName = language.name.toLowerCase().split(' ').join('-');
 
   try {
-    language.codeSample = require(`../code-samples/${languageName}-code-sample.java`);
+    language.codeSample = require(`../code-samples/${languageName}-code-sample`);
   } catch(e) {
     // console.log(`Failed to require ../code-samples/${patternName}-code-sample.png`);
   }
